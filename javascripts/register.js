@@ -42,6 +42,8 @@ function ifEditLoadInfos()
     localStorage.setItem('isEdit', JSON.stringify(false));
 }
 
+
+
 function onInputChanged(inputName)
 {
     document.getElementById(inputName).setAttribute("value", document.getElementById(inputName).value);
@@ -58,7 +60,7 @@ function createServiceInput(index, service)
         <div id="container-input-service-{id}" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/service-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-service-{id}" onchange="onInputChanged('input-service-{id}')"  class="input-custom" placeholder="Serviço a ser realizado" width="100%" Value="{value}" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-service-{id}')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-service-{id}')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
     `;
 

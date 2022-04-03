@@ -24,6 +24,41 @@
         {
             text-indent: 30px;
         }
+
+        @media only screen and (min-width: 768px) 
+        {
+            input[type="date"].input-custom
+            {
+                text-indent: 16px !important;
+            }
+
+            input[type="time"].input-custom
+            {
+                text-indent: 16px !important;
+            }
+        }
+
+        @media only screen and (max-width: 767px) 
+        {
+            input[type="date"].input-custom
+            {
+                text-indent: 26px !important;
+            }
+
+            input[type="time"].input-custom
+            {
+                text-indent: 26px !important;
+            }
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+
     </style>
 
 </head>
@@ -44,25 +79,25 @@
         <div id="container-input-name" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/person-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-name" class="input-custom" placeholder="Nome do Cliente" width="100%" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-phone" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/phone-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <input id="input-phone" data-mask="(000) 00000-0000" data-mask-selectonfocus="true" class="input-custom" placeholder="Telefone do Cliente" width="100%" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-phone')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <input id="input-phone" type="tel" data-mask="(000) 00000-0000" data-mask-selectonfocus="true" class="input-custom" placeholder="Telefone do Cliente" width="100%" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-phone')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-day" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/calendar-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <input id="input-day" class="input-custom" placeholder="Dia do agendamento do serviço" width="100%" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-day')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <input id="input-day" class="input-custom" onfocus="this.showPicker()" type="date" onchange="this.className=(this.value!='input-custom'?'input-custom has-value':'input-custom')" placeholder="Dia do agendamento do serviço" width="100%" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-day')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-time" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/clock-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <input id="input-time" data-mask="00:00" data-mask-selectonfocus="true" class="input-custom" placeholder="Horário do agendamento do serviço" width="100%" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-time')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <input id="input-time" data-mask="00:00"  onfocus="this.showPicker()" type="time" onchange="this.className=(this.value!='input-custom'?'input-custom has-value':'input-custom')" data-mask-selectonfocus="true" class="input-custom" placeholder="Horário do agendamento do serviço" width="100%" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-time')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="services-container" style="margin-top: 2em;">
@@ -71,13 +106,10 @@
             <button class="bold white center" onclick="createServiceInput(-2)" style="border-radius: 4px; padding: 1em; background-color: midnightblue; margin-left: 50%; transform: translate(-50%, 0%);">Adicionar novo serviço</button>
         </div>
         
-        <!-- CRIAR MECANISMO PARA TER MAIS INPUTS NAO OBRIGATORIOS DE SERVICOS -->
-        
-        
         <div id="container-input-price" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
             <img src="/imagens/price-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <input id="input-price" class="input-custom" placeholder="Valor total cobrado" width="100%" />
-            <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-price')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+            <input id="input-price" type="number" class="input-custom" placeholder="Valor total cobrado" width="100%" />
+            <img src="/imagens/clear-icon.png" width="16px" onclick="clearInput('input-price')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <!-- INPUTS DE ESTADO -->

@@ -33,6 +33,19 @@ function actualDateFormatted(){
     return dayF+"/"+mounthF+"/"+yearF;
 }
 
+function changeTypeAndShowPicker(inputName, inputType)
+{
+    if(document.getElementById(inputName).getAttribute("type") == inputType)
+    {
+        document.getElementById(inputName).showPicker();
+        return;
+    }
+
+    document.getElementById(inputName).setAttribute("type", inputType);
+    
+    changeTypeAndShowPicker(inputName, inputType);
+}
+
 function clearInput(id)
 {
     document.getElementById(id).value = "";
