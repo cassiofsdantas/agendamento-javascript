@@ -56,8 +56,7 @@ function createServiceInput(index, service)
 
     var newInput = `
         <div id="container-input-service-{id}" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/service-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-service-{id}" onchange="onInputChanged('input-service-{id}')"  class="input-custom" placeholder="Serviço a ser realizado" width="100%" Value="{value}" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-service-{id}')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>

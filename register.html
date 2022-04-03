@@ -18,6 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        input.input-custom
+        {
+            text-indent: 30px;
+        }
+    </style>
+
 </head>
 <body>
     <div id="header-content"></div>
@@ -34,29 +42,25 @@
     <div id="content">
         
         <div id="container-input-name" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/person-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-name" class="input-custom" placeholder="Nome do Cliente" width="100%" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-phone" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/phone-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-phone" data-mask="(000) 00000-0000" data-mask-selectonfocus="true" class="input-custom" placeholder="Telefone do Cliente" width="100%" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-phone')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-day" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/calendar-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-day" class="input-custom" placeholder="Dia do agendamento do serviço" width="100%" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-day')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
         
         <div id="container-input-time" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/clock-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-time" data-mask="00:00" data-mask-selectonfocus="true" class="input-custom" placeholder="Horário do agendamento do serviço" width="100%" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-time')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
@@ -71,8 +75,7 @@
         
         
         <div id="container-input-price" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
-            <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+            <img src="/imagens/price-icon.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
             <input id="input-price" class="input-custom" placeholder="Valor total cobrado" width="100%" />
             <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-price')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
         </div>
