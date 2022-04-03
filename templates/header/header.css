@@ -1,0 +1,26 @@
+.selected-tab-menu
+{
+  width: 49.99%;
+  height: 60px;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.unselected-tab-menu
+{
+  border: none;
+  width: 49.99%;
+  height: 60px;
+  margin: 0px;
+  background-color: grey;
+  color: white;
+}
+
+.collapse-input
+{
+    visibility: collapse;
+    display: none;
+}

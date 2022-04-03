@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/templates/cards/card.css">
+
+<div class="card">
+    <div class="card-container">
+        <div>
+            <img src="/imagens/person.png" class="card-image-picture card-round">
+        </div>
+        <div>
+            <p id="client-name" class="card-text bold"></p>
+            <p id="client-phone" class="card-text"></p>
+        </div>
+        <div class="card-align-right">
+            <button class="transparent transparent-border" onclick="redirectToEdit({index})">
+                <img src="/imagens/pen.png" class="card-image" >
+            </button>
+        </div>
+    </div>
+    <div class="card-container card-shadow" style="background-color: gainsboro;">
+        <ul id="card-list-services">
+        </ul>
+    </div>
+    <div class="card-container">
+        <p class="card-text bold card-description">Data: </p>
+        <p id="client-schedule-date" class="card-text"></p>
+
+        <p class="card-align-right card-text bold card-description">Hora: </p>
+        <p id="client-schedule-time" class="card-text"  style="margin-right: 2em;"></p>
+    </div>
+    <div class="card-container">
+        <p class="card-text bold card-description">Valor: </p>
+        <p id="client-schedule-value" class="card-text card-description"></p>
+    </div>
+</div>

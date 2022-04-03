@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/templates/header/header.css">
+
+<h2 id="header-title" class="center bold" style="width: 100%;"></h2>
+    
+<button class="transparent transparent-border absolute-right-bottom" style="background-color: black; padding: 1em; border-radius: 50%;" onclick="redirecttoregister()">
+    
+    <!-- BOTAO DE CADASTRO -->
+    <h4 class="bold white">
+        Novo<br>Cadastro
+    </h4>
+</button>
+
+<div class="flex-container" style="margin-top: 2em;">
+
+    <!-- REGIAO DAS TABS -->
+
+    <button id="tab-home" onclick="redirecttohomepage()">Próximos atendimentos</button>
+    <button id="tab-history" onclick="redirectToHistory()">Histórico de atendimentos</button>
+</div>
+
+<div class="default-margin">
+
+    <!-- REGIAO DOS SWITCHS -->
+
+    <!-- <div class="flex-container" style="width: 100%; height: 40px;">
+        <h3 class="bold" style="width: 100%;" >Exibir todos os filtros</h3>
+        <div class="float-right" style="margin-top: 1em;">
+            <label class="switch float-right">
+                <input id="input-show-all" type="checkbox" onclick="showInputFields()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="flex-container" style="width: 100%; height: 40px;">
+        <h3 class="bold" style="width: 100%;" >Exibir filtros com valores</h3>
+        <div class="float-right" style="margin-top: 1em;">
+            <label class="switch float-right">
+                <input id="input-show-filled" type="checkbox" onclick="showInputFields()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div> -->
+
+    <!-- REGIAO DOS INPUTS -->
+
+    <!-- <div id="container-input-name" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+        <input id="input-name" class="input-custom" placeholder="Pesquisar por nome" width="100%" />
+        <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+    </div>
+
+    <div id="container-input-phone" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+        <input id="input-phone" data-mask="(000) 00000-0000" data-mask-selectonfocus="true" class="input-custom" placeholder="Pesquisar por telefone" width="100%" />
+        <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+    </div>
+
+    <div id="container-input-day" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+        <input id="input-day" class="input-custom" placeholder="Pesquisar por dia" width="100%" />
+        <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+    </div>
+
+    <div id="container-input-time" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+        <input id="input-time" data-mask="00:00" class="input-custom" placeholder="Pesquisar por hora" width="100%" />
+        <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+    </div>
+
+    <div id="container-input-service" class="relative-container default-margin-vertical" style="width: 100%; height: 30px;">
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%)" />
+        <img src="/imagens/pen.png" width="16px" style="position: absolute; top: 50%; left: 36px; transform: translateY(-50%)" />
+        <input id="input-service" class="input-custom" placeholder="Pesquisar por serviço" width="100%" />
+        <img src="/imagens/pen.png" width="16px" onclick="clearInput('input-name')" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%)" />
+    </div> -->
+</div>
+
+<hr style="margin: 1em 8px;" />

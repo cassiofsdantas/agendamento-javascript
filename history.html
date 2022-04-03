@@ -1,0 +1,37 @@
+<!doctype html>
+<head lang="pt-BR">
+    <title>Histórico de atendimentos</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="canonical" href="index.html">
+    
+    <link rel="apple-touch-icon" href="imagens/pmv-512x512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Histórico de atendimentos">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-content"></div>
+    <div id="content"></div>
+
+    <script type="text/javascript" src="models/schedule.js"></script>
+    <script type="text/javascript" src="javascripts/serviceworkerstarter.js"></script>
+    <script type="text/javascript" src="javascripts/reloadpagestyles.js"></script>
+    <script type="text/javascript" src="javascripts/utils.js"></script>
+    <script type="text/javascript" src="templates/header/header.js"></script>
+    <script type="text/javascript" src="templates/cards/card.js"></script>
+
+    <script>
+        addHeader(false);
+        addCards(false);
+    </script>
+</body>

@@ -1,0 +1,184 @@
+:root
+{
+  --inputbackgroundgrey: rgb(240, 239, 244);
+  --inputtextplaceholdergrey: rgb(169, 172, 178);
+}
+
+body
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+#content
+{
+  margin: 8px;
+}
+
+.default-margin
+{
+  margin: 1em;
+}
+
+.default-margin-vertical
+{
+  margin: 1em 0em;
+}
+
+
+.absolute-right-bottom
+{
+  position: fixed;
+  bottom:0;
+  right:0;
+  margin-bottom: 1em; 
+  margin-right: 0.5em;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.relative-container {
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.white 
+{
+  color: white;  
+}
+
+.bold
+{
+  font-weight: bold;
+}
+
+.transparent
+{
+  background-color: transparent;
+}
+
+.transparent-border
+{
+  border: none;
+}
+
+.center
+{
+  text-align: center;
+}
+
+.float-right
+{
+  float: right;
+}
+
+.flex-container
+{
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16x);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.input-custom
+{
+  background-color: var(--inputbackgroundgrey);
+  border-color: var(--inputbackgroundgrey);
+  border-radius: 4px;
+  box-shadow: none;
+  width: 100%;
+  border-style: none;
+}
+
+input
+{
+  text-indent: 60px;
+  height: 30px;
+}
+
+input:not(:placeholder-shown) {
+  font-weight: bold;
+}
+
+.input-bullet
+{
+  text-indent: 8px;
+  height: auto;
+}
