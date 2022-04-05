@@ -1,3 +1,4 @@
+//funcao que adiciona o cabeçalho nas paginas
 function addHeader(isIndex) 
 {
     const div = document.createElement('div');
@@ -21,11 +22,13 @@ function addHeader(isIndex)
         });
 }
 
+//funcao que troca o titulo do cabeçalho
 function changeHeaderTitle(title)
 {
     document.getElementById('header-title').append(title)
 }
 
+//funcao que troca a tab em focus de acordo com a pagina
 function changeHeaderFocusTab(isIndex)
 {
     document.getElementById("tab-home").className += document.getElementById("tab-home").className + " " + getHeaderTitle(isIndex); 
@@ -33,11 +36,13 @@ function changeHeaderFocusTab(isIndex)
     document.getElementById("tab-history").className += document.getElementById("tab-history").className + " " + getHeaderTitle(!isIndex);
 }
 
+//funcao que identifica qual a tab selecionada na determinada pagina
 function getHeaderTitle(isIndex)
 {
     return isIndex ? "selected-tab-menu" : "unselected-tab-menu";
 }
 
+//funcao que identifica quais filtros mostrar
 function showInputFields()
 {
     var showAll = document.getElementById("input-show-all").checked;
@@ -50,6 +55,7 @@ function showInputFields()
     showInputField("input-service", showAll, showFilleds);
 }
 
+//funcao que habilita todos os filtros ou um especifico
 function showInputField(id, showAll, showFilleds)
 {
     document.getElementById("container-"+id).className = document.getElementById("container-"+id).className.replace(" collapse-input", "");
@@ -61,6 +67,7 @@ function showInputField(id, showAll, showFilleds)
     }
 }
 
+//funcao que verifica se o campo de filtro esta preenchido com algum valor
 function showFilledInput(id, showFilleds)
 {
     return showFilleds &&

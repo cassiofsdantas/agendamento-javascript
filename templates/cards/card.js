@@ -1,3 +1,5 @@
+
+//funcao que cria os cards na tela principal ou do historico, e realiza o filtro de qual mostrar
 function addCards(isIndex) 
 {
     document.getElementById('content').innerHTML = "";
@@ -64,6 +66,7 @@ function addCards(isIndex)
         });
 }
 
+//funcao que preenche os dados dos cards
 function changeCardInfos(schedule, i)
 {
     document.getElementById('client-name').id = "client-name" + i;
@@ -85,6 +88,7 @@ function changeCardInfos(schedule, i)
     document.getElementById('client-schedule-value'+i).append(schedule.price);
 }
 
+//funcao que preenche a lista de servicos como item htmk
 function getServicesList(services)
 {
     var html = "";

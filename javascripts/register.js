@@ -3,12 +3,14 @@ var currentServicesCount = 0;
 
 window.onbeforeunload = function (e) {
 
+    //Seta a variavel de se a pagina esta no modo edicao no recarregamento
     if(index > -1)
     {
         localStorage.setItem('isEdit', JSON.stringify(true));
     }
 };
 
+//funcao que verificar se a tela de cadastro ira ser utilizada como edição e ajusta e seta os valores nos campos para se comportarem como tal
 function ifEditLoadInfos()
 {
     var isEdit = JSON.parse(localStorage.getItem('isEdit'));
@@ -42,13 +44,13 @@ function ifEditLoadInfos()
     localStorage.setItem('isEdit', JSON.stringify(false));
 }
 
-
-
+//funcao que verifica a mudancao de valores no campo de entrada e seta o valor no value do campo no html para nao perder na adicão de um novo campo
 function onInputChanged(inputName)
 {
     document.getElementById(inputName).setAttribute("value", document.getElementById(inputName).value);
 }
 
+//funcao que criar os novos campos de entrada para novos servicos no mesmo atendimento
 function createServiceInput(index, service)
 {
     if(index == -2)
@@ -86,6 +88,7 @@ function createServiceInput(index, service)
     document.getElementById("services-container").innerHTML += newInput;
 }
 
+//funcao que faz a selecao do status selecionado atualmente
 function setStatus(currentStatus)
 {
     var status = document.getElementsByName('status');
@@ -98,6 +101,7 @@ function setStatus(currentStatus)
     }
 }
 
+//função que realiza o registro de um novo cadastro
 function register()
 {
     var name = document.getElementById("input-name").value;
@@ -214,6 +218,7 @@ function register()
     redirecttohomepage();
 }
 
+//funcao que verifica se o valor passado não é nulo, e caso seja mostra um alerta em tela
 function verifyNotNull(value, message)
 {
     if(value == null || value.trim() == "")
@@ -225,6 +230,7 @@ function verifyNotNull(value, message)
     return true;
 }
 
+// Função que verifica se pelo menos um status foi selecionado
 function verifyOneChecked(isTodo, isCanceled, isFinished, message)
 {
     if(!isTodo && !isCanceled && !isFinished)

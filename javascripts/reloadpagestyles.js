@@ -1,3 +1,4 @@
+//Script que forca a atualização da classe de estilos em cache
 window.forceReload = function()
 {
     if (!window.fetch) 

@@ -1,3 +1,4 @@
+//Funcao que inicia a chamada do service worker na aplicação
 if ("serviceWorker" in navigator) {
     if (navigator.serviceWorker.controller) 
     {

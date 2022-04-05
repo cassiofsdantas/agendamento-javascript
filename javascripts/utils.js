@@ -1,21 +1,25 @@
+//funcao que redireciona para a pagina de historico
 function redirectToHistory()
 {
     localStorage.setItem('isEditIndex', JSON.stringify(-1));
     window.location = "./history.html";
 }
 
+//funcao que redireciona para a pagina principal
 function redirecttohomepage()
 {
     localStorage.setItem('isEditIndex', JSON.stringify(-1));
     window.location = "./index.html";
 }
 
+//funcao que redireciona para a pagina de registro
 function redirecttoregister()
 {
     localStorage.setItem('isEditIndex', JSON.stringify(-1));
     window.location = "./register.html";
 }
 
+//funcao que redireciona para a pagina de edicao e seta quem sera editado
 function redirectToEdit(index)
 {
     localStorage.setItem('isEdit', JSON.stringify(true));
@@ -23,6 +27,7 @@ function redirectToEdit(index)
     window.location = "./register.html";
 }
 
+//funcao que obtem a data atual formatada
 function actualDateFormatted(){
     var date = new Date(),
         day  = date.getDate().toString(),
@@ -33,6 +38,7 @@ function actualDateFormatted(){
     return dayF+"/"+mounthF+"/"+yearF;
 }
 
+//funcao que troca o tipo do campo de input de normal para outro
 function changeTypeAndShowPicker(inputName, inputType)
 {
     if(document.getElementById(inputName).getAttribute("type") == inputType)
@@ -46,11 +52,13 @@ function changeTypeAndShowPicker(inputName, inputType)
     changeTypeAndShowPicker(inputName, inputType);
 }
 
+//funcao que limpa o campo de input
 function clearInput(id)
 {
     document.getElementById(id).value = "";
 }
 
+//funcao que clone um objeto complexo em memoria para evitar edicao por referencia
 function clone(obj) {
     var copy;
 

@@ -1,3 +1,4 @@
+//classe que representa o objeto de um agendamento
 class Schedule 
 {
     constructor(name, phone, services, date, time, price, status)
