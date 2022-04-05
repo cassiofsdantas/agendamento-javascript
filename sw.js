@@ -1,4 +1,4 @@
-const cacheName = "agendamento-de-clientes-v0.0.4";
+const cacheName = "agendamento-de-clientes-v1.0.0";
 var precacheFiles = [
   '/index.html',
   '/history.html',
